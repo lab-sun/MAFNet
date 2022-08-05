@@ -1,0 +1,2 @@
+from .MAFNet import MAFNet
+
