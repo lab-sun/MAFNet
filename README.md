@@ -63,11 +63,9 @@ Note: Please change the smoothing factor in the Tensorboard webpage to `0.999`, 
 If you use MAFNet in your academic work, please cite:
 ```
 ```
-
+# test
 # Acknowledgement
 Some of the codes are borrowed from [RTFNet](https://github.com/yuxiangsun/RTFNet), [AARTFNet](https://github.com/hlwang1124/AAFramework) and [TransUNet](https://github.com/Beckschen/TransUNet)
-
-
 
 Contact: yx.sun@polyu.edu.hk
 
