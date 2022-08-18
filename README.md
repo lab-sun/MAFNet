@@ -67,8 +67,6 @@ If you use MAFNet in your academic work, please cite:
 # Acknowledgement
 Some of the codes are borrowed from [RTFNet](https://github.com/yuxiangsun/RTFNet), [AARTFNet](https://github.com/hlwang1124/AAFramework) and [TransUNet](https://github.com/Beckschen/TransUNet)
 
-
-
 Contact: yx.sun@polyu.edu.hk
 
 Website: https://yuxiangsun.github.io/
