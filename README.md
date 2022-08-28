@@ -62,6 +62,15 @@ Note: Please change the smoothing factor in the Tensorboard webpage to `0.999`, 
 # Citation
 If you use MAFNet in your academic work, please cite:
 ```
+  @ARTICLE{Feng2022MAFNet,
+  author={Feng, Zhen and Guo, Yanning and Liang, Qing and Usman Maqbool Bhutta, M. and Wang, Hengli and Liu, Ming and Sun, Yuxiang},
+  journal={IEEE Transactions on Instrumentation and Measurement}, 
+  title={MAFNet: Segmentation of Road Potholes with Multi-modal Attention Fusion Network for Autonomous Vehicles}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TIM.2022.3200100}}
 ```
 # test
 # Acknowledgement
