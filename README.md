@@ -2,7 +2,9 @@
 The official pytorch implementation of MAFNet: Segmentation of Road Potholes with Multi-modal Attention Fusion Network for Autonomous Vehicles. 
 
 We test our code in Python 3.7, CUDA 11.1, cuDNN 8, and PyTorch 1.7.1. We provide `Dockerfile` to build the docker image we used. You can modify the `Dockerfile` as you want.  
+
 <img src="doc/network.png" width="900px"/>
+
 # Introduction
 MAFNet is a multi-modal fusion network for semantic segmentation of road potholes.
 # Dataset
