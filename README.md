@@ -8,9 +8,9 @@ We test our code in Python 3.7, CUDA 11.1, cuDNN 8, and PyTorch 1.7.1. We provid
 # Introduction
 MAFNet is a multi-modal fusion network for semantic segmentation of road potholes.
 # Dataset
-The original dataset can be downloaded from the AARTFnet project [page](https://sites.google.com/view/pothole-600).However, you are encouraged to download our processed data from [here]().
+The original dataset can be downloaded from the AARTFnet project [page](https://sites.google.com/view/pothole-600). You can use the augmentation method proposed in this paper to get the training dataset or you can download our processed data from [here](http://158.132.173.199/zfeng/MAFNet/).
 # Pretrained weights
-The pretrained weight of MAFNet can be downloaded from [here]().
+The pretrained weight of MAFNet can be downloaded from [here](http://158.132.173.199/zfeng/MAFNet/).
 # Usage
 * Clone this repo
 ```
