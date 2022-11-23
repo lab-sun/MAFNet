@@ -5,6 +5,10 @@ We test our code in Python 3.7, CUDA 11.1, cuDNN 8, and PyTorch 1.7.1. We provid
 
 <img src="doc/network.png" width="900px"/>
 
+<center>
+<a href="https://www.youtube.com/watch?v=hQM5IW5N91M"><img src="doc/demo_cover.PNG" width="65%" height="65%" />
+</center>
+
 # Introduction
 MAFNet is a multi-modal fusion network for semantic segmentation of road potholes.
 # Dataset
