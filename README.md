@@ -47,7 +47,7 @@ $ unzip -d .. dataset.zip
 $ docker run -it --shm-size 8G -p 1234:6006 --name docker_container_mafnet --gpus all -v ~/MAFNet:/workspace docker_image_mafnet
 $ (currently, you should be in the docker)
 $ cd /workspace
-$ python3 run_demo.py
+$ python3 test.py
 ```
 The results will be saved in the `./runs` folder.
 * To train MAFNet
@@ -68,6 +68,14 @@ $ (fire up your favorite browser with http://localhost:1234, you will see the te
 ```
 The results will be saved in the `./runs` folder.
 Note: Please change the smoothing factor in the Tensorboard webpage to `0.999`, otherwise, you may not find the patterns from the noisy plots. If you have the error `docker: Error response from daemon: could not select device driver`, please first install [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) on your computer!
+
+# Tests
+```
+$ pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+$ pip install -r requirements.txt
+$ pip install pytest hypothesis
+$ pytest -q
+```
 
 # Citation
 If you use MAFNet in your academic work, please cite:

@@ -6,7 +6,6 @@ import math
 import numpy as np
 import torch
 import torch.nn as nn
-from torch.nn.modules.container import T 
 import torchvision.models as models
 
 
@@ -14,13 +13,19 @@ def swish(x):
     return x * torch.sigmoid(x)
 ACT2FN = {"gelu": torch.nn.functional.gelu, "relu": torch.nn.functional.relu, "swish": swish}
 
+def _resnet34(pretrained=True):
+    if hasattr(models, 'ResNet34_Weights'):
+        weights = models.ResNet34_Weights.IMAGENET1K_V1 if pretrained else None
+        return models.resnet34(weights=weights)
+    return models.resnet34(pretrained=pretrained)
+
 class MAFNet(nn.Module):
 
-    def __init__(self, n_class,input_h,input_w):
+    def __init__(self, n_class,input_h,input_w,pretrained=True):
         super(MAFNet, self).__init__()
 
-        resnet_raw_model1 = models.resnet34(pretrained=True)
-        resnet_raw_model2 = models.resnet34(pretrained=True)
+        resnet_raw_model1 = _resnet34(pretrained)
+        resnet_raw_model2 = _resnet34(pretrained)
         self.inplanes = 512
         self.input_h = input_h
         self.input_w = input_w

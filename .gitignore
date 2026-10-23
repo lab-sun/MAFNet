@@ -1,0 +1,10 @@
+# local tool and mutation-testing caches
+.mutmut-cache
+mutants/
+html/
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]

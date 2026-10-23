@@ -28,10 +28,11 @@ class RandomCrop():
         if np.random.rand() < self.prob:
             w, h, c = rgb.shape
 
-            h1 = np.random.randint(0, h*self.crop_rate)
-            w1 = np.random.randint(0, w*self.crop_rate)
-            h2 = np.random.randint(h-h*self.crop_rate, h+1)
-            w2 = np.random.randint(w-w*self.crop_rate, w+1)
+            # Cast to int. NumPy 1.23 and 2.5 truncate a positive float bound the same way.
+            h1 = np.random.randint(0, int(h * self.crop_rate))
+            w1 = np.random.randint(0, int(w * self.crop_rate))
+            h2 = np.random.randint(int(h - h * self.crop_rate), h + 1)
+            w2 = np.random.randint(int(w - w * self.crop_rate), w + 1)
 
             rgb = rgb[w1:w2, h1:h2]
             tdisp = tdisp[w1:w2, h1:h2]
@@ -50,10 +51,11 @@ class RandomCropOut():
         if np.random.rand() < self.prob:
             w, h, c = rgb.shape
 
-            h1 = np.random.randint(0, h*self.crop_rate)
-            w1 = np.random.randint(0, w*self.crop_rate)
-            h2 = int(h1 + h*self.crop_rate)
-            w2 = int(w1 + w*self.crop_rate)
+            # Cast to int. NumPy 1.23 and 2.5 truncate a positive float bound the same way.
+            h1 = np.random.randint(0, int(h * self.crop_rate))
+            w1 = np.random.randint(0, int(w * self.crop_rate))
+            h2 = int(h1 + h * self.crop_rate)
+            w2 = int(w1 + w * self.crop_rate)
 
             rgb[w1:w2, h1:h2] = 0
             tdisp[w1:w2, h1:h2] = 0

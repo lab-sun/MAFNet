@@ -12,7 +12,7 @@ class MF_dataset(Dataset):
         super(MF_dataset, self).__init__()
 
         assert split in ['train', 'validation', 'test'], \
-            'split must be "train"|"val"|"test"|"test_day"|"test_night"|"val_test"|"most_wanted"'  # test_day, test_night
+            'split must be "train"|"validation"|"test"'
 
         with open(os.path.join(data_dir, split+'.txt'), 'r') as f:
             self.names = [name.strip() for name in f.readlines()]
